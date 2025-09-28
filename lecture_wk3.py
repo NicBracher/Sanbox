@@ -81,3 +81,17 @@ def do_this_now():
 
 
 do_this_now()
+
+
+def second_do_this_now():
+    """This is a practice function at pulling information out of a file."""
+    # The below file doesn't exist yet but it should be a csv with name,age as the headers then a few lines of names and age where appropiate 
+    with open("data2.txt", "r") as in_file: # This is another way of processing a file, theres no real difference.
+        in_line.redline() # This will read the frist line of a file and becuase we're not doing anything with it, is just a way of moving the start of the file down to ignore headers.
+        for line in in_file:
+            parts = line.strips().split(",") # This will split the line into a list where each item is sperated by a comma
+            name = parts[0] # This is the first item in the list
+            age = int(parts[1]) # This is the second item in the list
+            print(f"{name} is {age} years old.")
+    # No need to close the file when using 'with' as it automatically closes the file when done.
+            
